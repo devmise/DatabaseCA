@@ -1,6 +1,5 @@
 package org.example;
 
-import java.sql.*;
 import java.util.List;
 import java.util.Scanner;
 import com.google.gson.Gson;
@@ -42,14 +41,14 @@ public class Main {
                 insertMovie();
                 menu();
             case 5:
-                System.out.println("This feature is not working");
+                System.out.println("This feature is not available");
 //                displayMovieByFilter();
                 menu();
             case 6:
                 displayAllMoviesJSON();
                 menu();
             case 7:
-//                findMovieByIdJSON();
+                findMovieByIdJSON();
                 menu();
             case 8:
                 System.out.println("Goodbye...");
@@ -162,6 +161,30 @@ public class Main {
             }
         }
         catch (DaoException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void findMovieByIdJSON(){
+        MovieDaoInterface IMovieDao = new MySqlMovieDao();
+        Gson gson = new Gson();
+
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter movie ID: ");
+            int movie_id = scanner.nextInt();
+
+            int gsonInt = Integer.parseInt(gson.toJson(movie_id));
+            System.out.println("\nCall: findMovieByIdJSON");
+            String movie = IMovieDao.findMovieByIdJson(movie_id);
+
+            if (movie != null){
+                String movieJsonString = gson.toJson(movie);
+                System.out.println("Movie found: " + movieJsonString);
+
+            }
+            else
+                System.out.println("Movie with that id was not found");
+        } catch (DaoException e) {
             e.printStackTrace();
         }
     }

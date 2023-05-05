@@ -9,4 +9,6 @@ public interface MovieDaoInterface {
     public Movie deleteMovieById(int movie_id) throws DaoException;
     public Movie insertMovie(String name, String director, float rate, int year) throws DaoException;
     public String findAllMoviesJsonString() throws DaoException;
+    public String findMovieByIdJson(int movie_id) throws DaoException;
+
 }
