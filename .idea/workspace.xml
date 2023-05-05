@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="75991d1b-4af5-4c14-ac53-db487f08211c" name="Changes" comment="" />
+    <list default="true" id="75991d1b-4af5-4c14-ac53-db487f08211c" name="Changes" comment="Added insertMovie into interface. (not adding)&#10;findAllMoviesJsonString added into interface and can now be called from the menu. Successfully displaying the movies as a Json">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovieDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovieDaoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MySqlMovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MySqlMovieDao.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Nk9gCQQI2bTTf9pIIsi3X3U4JJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,7 +46,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -28,6 +63,101 @@
       <option name="presentableId" value="Default" />
       <updated>1680197324250</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test commit">
+      <created>1680199544884</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680199544884</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created mysqlSetup.sql file with 12 rows">
+      <created>1680801350226</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680801350226</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated mysql file">
+      <created>1680811663577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680811663577</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Corresponding Data Access Layer with a DTO, a DAO and corresponding interfaces created.&#10;Database successfully connected.&#10;Query findAllMovies working.">
+      <created>1681898255222</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681898255223</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Query findMovieById added">
+      <created>1681904632459</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681904632459</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Query deleteMovieById added">
+      <created>1683208740328</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683208740328</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Have all 3 queries now running without having to comment anything out">
+      <created>1683213228860</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683213228860</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Console menu created using switch statement. displayAllMovies(), findMovieById() &amp; deleteMovieById() features added to menu.">
+      <created>1683227261311</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683227261311</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Gson dependency added">
+      <created>1683281140522</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683281140522</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added insertMovie into interface. (not adding)&#10;findAllMoviesJsonString added into interface and can now be called from the menu. Successfully displaying the movies as a Json">
+      <created>1683281284847</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683281284847</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test commit" />
+    <MESSAGE value="Created mysqlSetup.sql file with 12 rows" />
+    <MESSAGE value="Updated mysql file" />
+    <MESSAGE value="Corresponding Data Access Layer with a DTO, a DAO and corresponding interfaces created.&#10;Database successfully connected.&#10;Query findAllMovies working." />
+    <MESSAGE value="Query findMovieById added" />
+    <MESSAGE value="Query deleteMovieById added" />
+    <MESSAGE value="Have all 3 queries now running without having to comment anything out" />
+    <MESSAGE value="Console menu created using switch statement. displayAllMovies(), findMovieById() &amp; deleteMovieById() features added to menu." />
+    <MESSAGE value="Gson dependency added" />
+    <MESSAGE value="Added insertMovie into interface. (not adding)&#10;findAllMoviesJsonString added into interface and can now be called from the menu. Successfully displaying the movies as a Json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added insertMovie into interface. (not adding)&#10;findAllMoviesJsonString added into interface and can now be called from the menu. Successfully displaying the movies as a Json" />
   </component>
 </project>
