@@ -3,6 +3,7 @@ package org.example;
 import java.sql.*;
 import java.util.List;
 import java.util.Scanner;
+import com.google.gson.Gson;
 
 
 public class Main {
@@ -38,17 +39,18 @@ public class Main {
                 deleteMovieById();
                 menu();
             case 4:
-//                insertMovie();
-                break;
+                insertMovie();
+                menu();
             case 5:
+                System.out.println("This feature is not working");
 //                displayMovieByFilter();
-                break;
+                menu();
             case 6:
-//                displayAllMoviesJSON();
-                break;
+                displayAllMoviesJSON();
+                menu();
             case 7:
 //                findMovieByIdJSON();
-                break;
+                menu();
             case 8:
                 System.out.println("Goodbye...");
                 System.exit(0);
@@ -109,6 +111,57 @@ public class Main {
             else
                 System.out.println("Movie with that id was not found");
         } catch (DaoException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertMovie() {
+        MovieDaoInterface IMovieDao = new MySqlMovieDao();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter movie name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter director name: ");
+        String director = scanner.nextLine();
+
+        System.out.println("Enter rating: ");
+        float rate = scanner.nextFloat();
+
+        System.out.println("Enter release year: ");
+        int year = scanner.nextInt();
+
+        System.out.println(name);
+
+        try {
+            Movie movie = IMovieDao.insertMovie(name, director, rate, year);
+            if(movie != null){
+                System.out.println("Movie successfully insterted with id: ");
+            }
+            else{
+                System.out.println("Movie insert failed");
+            }
+        } catch (DaoException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void displayAllMoviesJSON(){
+        MovieDaoInterface IMovieDao = new MySqlMovieDao();
+        Gson gsonParser = new Gson();
+        String movieJsonString = null;
+        try{
+            List<Movie> movies = IMovieDao.findAllMovies();
+            if (movies.isEmpty())
+                System.out.println("There are no movies");
+            else {
+                movieJsonString = gsonParser.toJson(movies);
+                System.out.println(movieJsonString);
+            }
+        }
+        catch (DaoException e) {
             e.printStackTrace();
         }
     }

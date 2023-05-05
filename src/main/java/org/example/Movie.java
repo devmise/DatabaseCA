@@ -6,6 +6,10 @@ public class Movie {
     private String movie_name;
     private String director;
     private float rating;
+    private int release_year;
+
+    public Movie(String name, String director, float rate, int year) {
+    }
 
     @Override
     public String toString() {
@@ -18,7 +22,7 @@ public class Movie {
                 '}';
     }
 
-    private int release_year;
+
 
     public Movie(int movie_id, String movie_name, String director, float rating, int release_year) {
         this.movie_id = movie_id;
